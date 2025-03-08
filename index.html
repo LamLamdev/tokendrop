@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$RETRO Website</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ✅ FINAL CSP FIX: Explicitly Allows Web3.js Execution -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://api.mainnet-beta.solana.com;">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="hi2.png" alt="Hero Background">
+        <button class="wallet-button">
+            <span class="button-text">Connect Wallet</span>
+        </button>
+    </div>
+
+    <!-- Content Section Image -->
+    <div class="content-image">
+        <img src="retro.png" alt="Content Section Image">
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 $RETRO. All rights reserved.</p>
+        <ul>
+            <li><a href="https://twitter.com/yourtwitter">X.com</a></li>
+        </ul>
+    </footer>
+
+    <!-- ✅ Load CSP-Safe Web3.js Before `script.js` -->
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.75.0/lib/index.iife.min.js"></script>
+
+    <!-- ✅ Load script.js After Web3.js -->
+    <script src="script.js"></script>
+</body>
+</html>
+
