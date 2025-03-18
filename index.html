@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 
     <!-- ✅ FINAL CSP FIX: Explicitly Allows Web3.js Execution -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://api.mainnet-beta.solana.com;">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://api.mainnet-beta.solana.com https://bundle.run;">
 </head>
 <body>
     <!-- Hero Section -->
     <div class="hero">
         <img src="hi2.png" alt="Hero Background">
         <button class="wallet-button">
-            <span class="button-text">Connect Wallet</span>
+            <span class="button-text">Connect Wallet</span>           
         </button>
+        <button id="scrollBtn" class="scroll-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35" fill="none">
+              <path d="M27 17.5L18 26.25L9 17.5" stroke="currentColor" stroke-width="2"/>
+              <path d="M27 8.75L18 17.5L9 8.75" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
     </div>
+
+
+    <div class="tokecnomis">
+        <img src="udd.png" alt="New Section Image">
+    </div>
+
 
     <!-- Content Section Image -->
     <div class="content-image">
@@ -31,11 +43,18 @@
         </ul>
     </footer>
 
-    <!-- ✅ Load CSP-Safe Web3.js Before `script.js` -->
-    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.75.0/lib/index.iife.min.js"></script>
+  <!-- ✅ Load Web3.js First -->
+<script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.66.0/lib/index.iife.min.js"></script>
 
-    <!-- ✅ Load script.js After Web3.js -->
-    <script src="script.js"></script>
+<!-- ✅ Load BN.js Next -->
+<script src="https://cdn.jsdelivr.net/npm/bn.js@5.2.0/lib/bn.min.js"></script>
+
+<script src="https://bundle.run/buffer@6.0.3"></script>
+
+<!-- ✅ Load script.js (MUST BE LAST) -->
+<script src="script.js"></script>
+
+    
+
 </body>
 </html>
-

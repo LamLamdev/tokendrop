@@ -34,6 +34,25 @@ body, html {
     transform: translate(-40%, -50%); /* Centering adjustment */
 }
 
+/* YOUR ORIGINAL CSS STAYS UNCHANGED ABOVE THIS POINT */
+
+/* Scroll Button Styling - newly added */
+.scroll-button {
+    color: #8d8484; /* White or your desired color */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 91.5%; /* Adjust vertical position if needed */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .scroll-button:hover {
+    color: #41a8c2; /* Hover color matches your wallet button style */
+  }
+  
+
 .wallet-button:hover {
     background: #e227c0; /* Darker shade for the hover state */
 }
@@ -91,4 +110,17 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+.tokecnomis {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden; /* Prevents extra spacing */
+}
+
+.tokecnomis img {
+    display: block; /* Removes extra spacing from inline images */
+    width: 100%;
+    height: auto; /* Keeps aspect ratio */
 }
