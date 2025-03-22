@@ -19,20 +19,7 @@ body, html {
     height: auto; /* Adjust based on your design needs */
 }
 
-.wallet-button {
-    display: inline-flex;
-    padding: px 8px 16px;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 30px;
-    border: 5px solid #41a8c2;
-    background: #f601d1;
-    cursor: pointer;
-    position: absolute; /* Adjust positioning as needed */
-    top: 65%;  /* Center vertically */
-    left: 14%; /* Center horizontally */
-    transform: translate(-40%, -50%); /* Centering adjustment */
-}
+
 
 /* YOUR ORIGINAL CSS STAYS UNCHANGED ABOVE THIS POINT */
 
